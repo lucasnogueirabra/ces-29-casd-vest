@@ -82,8 +82,16 @@ class Admin_Model extends Model
 
                 if(!$sth->fetchColumn())
                 {
-                    $sth1 = $connection->prepare("CREATE TABLE vestibulinho_casd_".strval(date('Y')+1)." SELECT * FROM vestibulinho_casd_2018 WHERE 1=0");
+                    $sth1 = $connection->prepare("CREATE TABLE vestibulinho_casd_".strval(date('Y')+1)." SELECT * FROM vestibulinho_casd_2018 WHERE 1=0; ALTER TABLE `vestibulinho_casd_".strval(date('Y')+1)."`  ADD PRIMARY KEY (`id`); ALTER TABLE `vestibulinho_casd_".strval(date('Y')+1)."`  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=170497;");
                     $sth1->execute();
+
+                    $sth2 = $connection->prepare("ALTER TABLE `vestibulinho_casd_".strval(date('Y')+1)."`  ADD PRIMARY KEY (`id`);");
+
+                    $sth2->execute();
+
+                    $sth3 = $connection->prepare("ALTER TABLE `vestibulinho_casd_".strval(date('Y')+1)."`  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=170497;");
+
+                    $sth3->execute();
                 }
             }
 
@@ -157,8 +165,16 @@ class Admin_Model extends Model
 
                 if(!$sth->fetchColumn())
                 {
-                    $sth1 = $connection->prepare("CREATE TABLE vestibulinho_casdinho_".strval(date('Y')+1)." SELECT * FROM vestibulinho_casdinho_2018 WHERE 1=0");
+                    $sth1 = $connection->prepare("CREATE TABLE vestibulinho_casdinho_".strval(date('Y')+1)." SELECT * FROM vestibulinho_casdinho_2018 WHERE 1=0;");
                     $sth1->execute();
+
+                    $sth2 = $connection->prepare("ALTER TABLE `vestibulinho_casdinho_".strval(date('Y')+1)."`  ADD PRIMARY KEY (`id`);");
+
+                    $sth2->execute();
+
+                    $sth3 = $connection->prepare("ALTER TABLE `vestibulinho_casdinho_".strval(date('Y')+1)."`  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=170497;");
+
+                    $sth3->execute();
                 }
             }
 

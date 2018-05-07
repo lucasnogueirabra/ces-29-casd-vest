@@ -22,7 +22,12 @@ class Entrevista extends Controller
 		if(!Session::get('logged_user_entrevista') || Session::get('logged_user_id') != $id_user)
 		{
 			Session::destroy();
-			Controller::redirect(ADMIN_LOGIN_LINK);
+			Controller::redirect(ENTREVISTA_LOGIN_LINK.'/'.$id_user);
+		}
+
+		if (!Session::get('token-entrevista-index'))
+		{    
+			Session::set('token-entrevista-index', md5(uniqid(rand(), TRUE)));
 		}
 
 		if($_SERVER['REQUEST_METHOD'] == 'POST')
@@ -33,7 +38,7 @@ class Entrevista extends Controller
 
 		$this->view->id_user = $id_user;
 		$this->view->controller = "entrevista";
-		$this->view->render('entrevista/index',true);
+		$this->view->render('entrevista/index');
 	}
 
 	function login($id_user = false)
@@ -47,20 +52,19 @@ class Entrevista extends Controller
 
 		if (Session::get('logged_user_entrevista'))
 		{
-			Controller::redirect(ADMIN_INDEX_LINK);
+			Controller::redirect(ENTREVISTA_INDEX_LINK.'/'.$id_user);
 		}
 
-		/*if (!Session::get('token-entrevista-login'))
+		if (!Session::get('token-entrevista-login'))
 		{    
 			Session::set('token-entrevista-login', md5(uniqid(rand(), TRUE)));
-		}*/
+		}
 
 		if($_SERVER['REQUEST_METHOD'] == 'POST')
 		{
-			//if($_POST['token-admin-login'] == Session::get('token-admin-login'))
-			//{
+			if($_POST['token-entrevista-login'] == Session::get('token-entrevista-login'))
+			{
 				$login = $this->model->login($id_user);
-				echo 'carai';
 				if($login)
 				{
 					echo 'carai';
@@ -70,12 +74,12 @@ class Entrevista extends Controller
 
 					Controller::redirect(URL.'entrevista/index/'.$id_user);
 				}
-			//}
+			}
 		}
 
 		$this->view->id_user = $id_user;
 		$this->view->controller = 'entrevista-login';
-		$this->view->render('entrevista/login', true);
+		$this->view->render('entrevista/login');
 	}
 
 }

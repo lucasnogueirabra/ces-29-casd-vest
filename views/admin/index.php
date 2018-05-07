@@ -194,7 +194,7 @@
             <br>
             <br>
             <br>
-            <!--
+
             <div class="row">
                 <div class="col-md-6">
                     <div class="panel panel-primary">
@@ -206,18 +206,13 @@
                             </div>
                         </div>
 
-                        <form method="POST" id="resultado_casd" enctype="multipart/form-data" action="<?php echo ADMIN_RESULTADO_CASD_LINK;?>">
-                            <input type="hidden" value="1" name="status_vestibulinho_casd">
+                        <form method="POST" id="resultado_casd" enctype="multipart/form-data" action="<?php echo URL;?>admin/uploadResultadoCasd">
                             <div class="form-group text-center">
                                 <label style="margin-top: 5px;">Planilha com notas dos candidatos</label>
-                                <input class="form-control" type="file" id="edital_vestibulinho_casd" required name="arquivo" placeholder="Selecione o edital" />
+                                <input class="form-control" type="file" id="edital_vestibulinho_casd" required name="arquivo" placeholder="Selecione o planilha" />
 
                             </div>
-                        <a id="submit_resultado_casd" href="#">
-                            <div class="panel-footer">
-                                <span class="text-center">Enviar Planilha</span>
-                            </div>
-                        </a>
+                            <input type="submit" />
                         </form>
                     </div>
                 </div>
@@ -230,16 +225,18 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">Download</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
+
+                        <form method="POST" id="resultado_casd" enctype="multipart/form-data" action="<?php echo URL;?>admin/uploadResultadoCasdinho">
+                            <div class="form-group text-center">
+                                <label style="margin-top: 5px;">Planilha com notas dos candidatos</label>
+                                <input class="form-control" type="file" id="edital_vestibulinho_casd" required name="arquivo" placeholder="Selecione o planilha" />
+
                             </div>
-                        </a>
+                            <input type="submit" />
+                        </form>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
         <!-- /.container-fluid -->
 

@@ -39,6 +39,9 @@ if(!ENVIRONMENT)
 	define('ADMIN_INDEX_LINK', URL.'admin/index');
 	define('ADMIN_PROF_LINK', URL.'admin/professores');
 	define('ADMIN_RESULTADO_CASD_LINK', URL.'admin/resultadoVestibulinhoCasd');
+
+	define('ENTREVISTA_LOGIN_LINK', URL.'entrevista/login');
+	define('ENTREVISTA_INDEX_LINK', URL.'entrevista/index');
 	
 	define('VIDEO_INSTITUCIONAL_LINK', 'http://www.youtube.com/watch?v=waX6e1veNIs');
 

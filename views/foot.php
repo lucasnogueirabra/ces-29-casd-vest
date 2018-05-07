@@ -20,7 +20,7 @@
     <script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
     <script src="<?php echo URL;?>JS/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
     <?php } ?>
-    <?php if($this->controller == 'vestibulinho') { ?>
+    <?php if($this->controller == 'vestibulinho'  || $this->controller == 'entrevista' || $this->controller == 'entrevista-login') { ?>
     <script src="<?php echo URL;?>js/vestibulinho.js" type="text/javascript"></script>
     <?php } ?>
     <?php if($this->controller == 'admin') { ?>

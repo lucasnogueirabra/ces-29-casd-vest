@@ -42,7 +42,7 @@
     <?php if($this->controller == 'construcao') { ?>
     <link href="<?php echo URL;?>css/construcao.css" rel="stylesheet">
     <?php } ?>
-    <?php if($this->controller == 'vestibulinho') { ?>
+    <?php if($this->controller == 'vestibulinho' || $this->controller == 'entrevista' || $this->controller == 'entrevista-login') { ?>
     <link href="<?php echo URL;?>css/vestibulinho.css" rel="stylesheet">
     <?php } ?>
     <?php if($this->controller == 'admin' || $this->controller == 'professor-admin') { ?>

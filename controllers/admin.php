@@ -367,15 +367,7 @@ class Admin extends Controller
 
 	}
 
-	/*function resultadoVestibulinhoCasd()
-	{
-		require_once 'libs/excel_reader/excel_reader.php';
 
-		$excel = new PhpExcelReader;
-		$excel->read($_FILES['arquivo']['tmp_name']);
-
-		$this->model->saveResultadoVestibulinhoCasd($excel->sheets);
-	}*/
 
 	function logout()
 	{

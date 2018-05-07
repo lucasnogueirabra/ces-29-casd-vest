@@ -48,3 +48,10 @@
 10:09 pm - 11/April/2018 - SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
 10:12 pm - 11/April/2018 - SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
 10:13 pm - 11/April/2018 - SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+8:43 am - 13/April/2018 - SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute.
+9:39 am - 13/April/2018 - SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+9:40 am - 13/April/2018 - SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+9:40 am - 13/April/2018 - SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+9:40 am - 13/April/2018 - SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+9:41 am - 13/April/2018 - SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+9:41 am - 13/April/2018 - SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
