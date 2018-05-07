@@ -299,7 +299,7 @@ class Admin_Model extends Model
             $connection = Service::openDb();
 
             foreach ($excelSheet[0]['cells'] as $value) {
-                $stmt = $connection->prepare("UPDATE vestibulinho_casdinho_".strval(date('Y')+1).'SET nota_vestibulinho = :nota_vestibulinho WHERE id = :id');
+                $stmt = $connection->prepare("UPDATE vestibulinho_casdinho_".strval(date('Y')+1).' SET nota_vestibulinho = :nota_vestibulinho WHERE id = :id');
             
                 $stmt->execute(array(':nota_vestibulinho' => $value[2],
                     ':id' => $value[1]-17041997));
@@ -316,6 +316,28 @@ class Admin_Model extends Model
         }
     }
 
+    public function uploadCSVtoDBCasd($csvResult)
+    {
+        try {
+            $connection = Service::openDb();
+
+            foreach ($csvResult as $linha) {
+                $stmt = $connection->prepare("UPDATE vestibulinho_casd_".strval(date('Y')+1).' SET nota_vestibulinho = :nota_vestibulinho WHERE id = :id');
+            
+                $stmt->execute(array(':nota_vestibulinho' => $linha['nota'], ':id' => $linha['id']-17041997));
+            }
+            
+            return true;
+
+
+        } catch (PDOException $e) {
+            $this->writeLog($e->getMessage());
+            return false;
+        } finally{
+            Service::closeDb();
+        }
+    }
+    
     public function getProfInfo()
     {
         try {

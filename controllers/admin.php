@@ -377,5 +377,36 @@ class Admin extends Controller
 		exit();
 	}
 
+
+	function uploadResultadoCasd()
+	{
+
+		Session::init();
+		if(!Session::get('logged_admin'))
+		{
+			Session::destroy();
+			Controller::redirect(ADMIN_LOGIN_LINK);
+		}
+
+		if ($this->uploadFile('files/', 'resultadoVestibulinhoCasd.csv'))
+		{
+			# 1. Incluindo a biblioteca CSV
+			require_once 'libs/ARQUIVOS/csv.class.php' ; 
+			 
+			# 2. Instanciando o Objeto de Manipulação de dados
+			$csv = new \ARQUIVOS\Csv( 'files/resultadoVestibulinhoCasd.csv' );
+			 
+			$csvResult = array();
+
+			# 3. Obtendo os resultados
+			foreach( $csv->ler() as $linha)
+			   $csvResult[] =  $linha;
+			
+			$this->model->uploadCSVtoDBCasd($csvResult);
+		}
+
+		Controller::redirect(ADMIN_INDEX_LINK);
+	
+	}
 }
 ?>

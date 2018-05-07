@@ -9,7 +9,7 @@ if(ENVIRONMENT)
 if(!ENVIRONMENT)
 {
 	define('URL', 'http://127.0.0.1/santosdumont-inaldo/');
-	define('DOCUMENT_ROOT', $_SERVER['DOCUMENT_ROOT'].'/santosdumont/');
+	define('DOCUMENT_ROOT', $_SERVER['DOCUMENT_ROOT'].'/santosdumont-inaldo/');
 }
 
 	define('INDEX_LINK', URL.'index');

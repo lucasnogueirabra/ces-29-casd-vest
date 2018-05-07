@@ -209,7 +209,7 @@
                         <form method="POST" id="resultado_casd" enctype="multipart/form-data" action="<?php echo URL;?>admin/uploadResultadoCasd">
                             <div class="form-group text-center">
                                 <label style="margin-top: 5px;">Planilha com notas dos candidatos</label>
-                                <input class="form-control" type="file" id="edital_vestibulinho_casd" required name="arquivo" placeholder="Selecione o planilha" />
+                                <input class="form-control" type="file" id="planilha_vestibulinho_casd" required name="arquivo" placeholder="Selecione o planilha" />
 
                             </div>
                             <input type="submit" />
@@ -226,10 +226,10 @@
                             </div>
                         </div>
 
-                        <form method="POST" id="resultado_casd" enctype="multipart/form-data" action="<?php echo URL;?>admin/uploadResultadoCasdinho">
+                        <form method="POST" id="resultado_casd" enctype="multipart/form-data" action="<?php echo URL;?>admin/uploadResultadoCasd">
                             <div class="form-group text-center">
                                 <label style="margin-top: 5px;">Planilha com notas dos candidatos</label>
-                                <input class="form-control" type="file" id="edital_vestibulinho_casd" required name="arquivo" placeholder="Selecione o planilha" />
+                                <input class="form-control" type="file" id="planilha_vestibulinho_casd" required name="arquivo" placeholder="Selecione o planilha" />
 
                             </div>
                             <input type="submit" />
