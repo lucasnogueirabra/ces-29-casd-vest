@@ -1,0 +1,131 @@
+h1
+{
+	font-family: 'Just Another Hand', cursive;
+	color: white;
+	font-size: 125px;
+}
+
+#page-wrapper
+{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background: linear-gradient(to bottom, #63CEFF, white);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h2
+{
+	font-family: 'Kalam', cursive;
+	color: #3BB1C1;
+	font-size: 34px;
+}
+
+#descricao
+{
+	text-indent: 40px;
+	font-family: 'Oxygen', sans-serif;
+	font-size: 24px;
+	padding: 10px 8%;
+}
+
+#content
+{
+	margin-top: 60px;	
+}
+
+#separator
+{
+	margin-bottom: 20px;
+	border-width: 1px;
+	border-top-style: solid;
+}
+
+#recados-list
+{
+	list-style-type: none;
+}
+
+.recado-content
+{
+	font-family: 'Oxygen', sans-serif;
+	font-size: 16px;
+}
+
+#materiais-list
+{
+	list-style-type: none;
+}
+
+.material a
+{
+	font-family: 'Oxygen', sans-serif;
+	font-size: 18px;
+	color: black;
+}
+
+.content-title
+{
+	margin-bottom: 40px;
+}
+
+#professores
+{
+	margin-top: 50px;
+}
+
+.materia-header
+{
+	border-style: solid;
+	border-width: 1px;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+	border-color: #F2D650;
+	text-align: center;
+	background: #F2D650;
+	color: black;
+	font-weight: 1000;
+	font-size: 18px;
+}
+
+.prof-list
+{
+	padding-top: 15px;
+	padding-bottom: 10px;
+	list-style-type: none;
+	font-size: 18px;
+	background: #63CEFF;
+	margin-bottom: 0;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.prof-panel
+{
+	margin-bottom: 10px;
+}
+
+.prof-name, .prof-list>a:hover, .prof-list>a:active, .prof-list>a:focus
+{
+	text-indent: 10px;
+	color:white;
+	margin: 5px 0;
+	text-decoration: none;
+}
+
+.legendaImagem{
+	text-align: center;
+	font-size: 21px;
+	font-family: 'Kalam', cursive;
+	}
+
+.prof-content-p
+{
+	text-indent: 30px;
+	font-size: 18px;
+}
+
+.prof-content-title
+{
+	margin-bottom: 35px;
+}
